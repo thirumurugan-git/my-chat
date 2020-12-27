@@ -1,0 +1,130 @@
+<html>
+<head>
+	<title>Login Form</title>
+	<script src = "/socket.io/socket.io.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+	background:url(../picture/family-back.jpg);
+	background-size:cover;
+}	
+.form{
+	
+	border-radius:18px;
+	width:35%;
+	height:80%;
+	position:absolute;
+	left:32.5%;
+	top:10%;
+	background-color:rgba(0, 0, 0, 0.7);
+	text-align:center;
+	box-sizing:border-box;
+	
+	
+}
+.form .head{
+	position:relative;
+	top:2%;
+	font-weight:bold;
+	font-family:courier sans-serif;
+	font-size:30px;
+	color:white;
+	background:transparent;
+	display:block;
+	transition:.5s;
+
+}
+.form:hover .head{
+	color:yellow;
+}
+.form .input-title{
+	display:block;
+	color:orange;
+	text-align:left;
+	font-family:menu;	
+	font-size:20px;
+	margin-left:5%;
+	box-sizing:border-box;
+	margin-top:4%;
+	
+}
+.form input[type="text"],.form input[type="password"]{
+
+	display:block;
+	border-radius:5px;
+	background:none;
+	border:2px solid white;
+	margin-left:5%;
+	width:80%;
+	color:white;
+	margin-top:4%;
+	font-weight:bold;
+	font-family:menu;
+	font-size:20px;
+	padding-left:2%;
+}
+.form input[type="text"]:focus{
+	background:white;
+	color:black;
+	border:4px solid orange;
+}
+#submit{
+	margin-top:10%;
+	border:2px solid orange;	
+	border-radius:10px;
+	color:white;
+	background:orange;
+	font-size:20px;
+
+}
+.form .image img{
+	width:40px;
+	height:40px;
+	margin-left:2%;
+	display:inline-block;	
+}
+.form .image{
+	margin-top:10%;
+}
+@media only screen and (max-width:768px){
+	.form{
+		width:60%;
+		height:70%;
+		left:20%;
+		top:15%;
+	}
+	
+}
+#credential{
+	margin:5% auto;
+	color:red;
+	display:<%=cred%>;
+	size:18px;
+
+}
+
+#loginstatus{
+	margin:5% auto;
+	color:red;
+	display:<%=login%>;
+	size:18px;
+
+}
+</style>
+</head>
+<body>
+	<div class="form">
+		<form action="\" method="post">
+		<span class="head">Login</span>
+		<span class="input-title">User Id:</span>
+		<input type="text" id="user" name="user">
+		<span class="input-title">Password:</span>
+		<input type="password" id="pwd" name="pwd">
+		<span id="credential">*wrong credentials</span>
+		<span id="loginstatus">*user already login</span>
+		<input id="submit" type="submit" value="Login">
+		</form>
+	</div>
+</body>
+</html>

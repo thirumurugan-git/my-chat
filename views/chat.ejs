@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Family-chate</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css"> 
+	<script src="js/script.js"></script>
+	<script src = "/socket.io/socket.io.js"></script>
+	<script src = "js/socket.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div id="header">
+			<div id="img-to-home" onclick="open_menu()">
+				<img src="picture/home.png">
+			</div>
+			<div id="img-to-close" onclick="close_menu()">
+				<img src="picture/close.png">
+			</div>
+			<span>Apparswamy Family</span>
+			<div id="logout"><div><a href="/logout" onclick="logout()">></a></div></div>
+		</div>
+		<div id="chat-application">
+			<div id="members">
+				<div class="show-title"><span>Members</span></div>
+				<div id="members-main">
+					<div id="your-name">
+						<span class="welcome-for-the-user">Welcome!</span>
+						<span class="name-of-the-user"><%=name%></span>
+					</div>
+				</div>
+			</div>
+			<div id="chat-main">
+				<div class="chat-title"><span>Chats</span></div>
+				<div id="chats-part">
+				</div>
+				<div id="send"><input id="send-box" onkeyup="typing(event)" placeholder="created by thiru"><button onclick="sbmt()" type="submit">send</button></div>
+			</div>
+		</div>
+		<div id="footer"><span>copyright @ apparswamy family</span></div>
+	</div>		
+</body>
+</html>

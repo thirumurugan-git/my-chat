@@ -1,0 +1,284 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	font:caption;
+}
+/*------------header---------*/
+.main{
+	width:100%;
+	height:100%;
+	padding:2px;
+}
+#header{
+	width:100%;
+	background-color:#17db17;
+	color:white;
+	text-align:center;
+	height:40px;
+}
+#img-to-home{
+	height:40px;
+	float:left;
+	margin-left:5px;
+	display:none;
+}
+#img-to-close{
+	margin:2.5px;
+	height:35px;
+	float:left;
+	display:none;
+}
+#header img{
+	height:inherit;
+}
+#header span{
+	font-size:32px;
+	font-weight:bold;
+}
+#logout{
+	float:right;
+	padding:2.5px;
+	font-weight:bold;
+	font-size:25px;
+}
+#logout div a{
+	text-decoration:none;
+	color:yellow;
+}
+#logout div{
+	border-radius:50%;
+	background-color:black;
+	height:35px;
+	width:35px;
+	text-align:center;
+}
+/*-------chat application and members---------*/
+#chat-application{
+	width:100%;
+	margin:2px 0px;
+	position:relative;
+	height:calc(100% - 84px);
+}
+#members{
+	width:calc(25% - 4px);
+	border:2px solid orange;
+	margin-right:2px;	
+	float:left;
+	overflow:auto;
+	height:calc(100% - 6px);
+}
+#members-main{
+	box-sizing:border-box;
+	width:100%;
+	padding:5px;
+	overflow:auto;
+}
+.members-in-chat{
+	display:block;
+	background:yellowgreen;
+	border-radius:5px;
+	text-align:center;
+	margin-bottom:5px;
+}
+#your-name{
+	display:block;
+	background:black;
+	border-radius:5px;
+	text-align:center;
+	margin-bottom:5px;
+}
+.welcome-for-the-user{
+	font-weight:bold;
+	display:block;
+	color:yellow;
+	font-size:25px;
+}
+.name-of-the-user{
+	font-weight:bold;
+	display:block;
+	color:white;
+	font-size:20px;
+	text-transform:capitalize;
+}
+.members-in-chat .mem-name{
+	font-weight:bold;
+	display:block;
+	color:white;
+	font-size:20px;
+	text-transform:capitalize;
+}
+.members-in-chat .status{
+	font-weight:bold;
+	font-size:12px;
+}
+	/*----------------title-------------*/
+.show-title,.chat-title{
+	width:100%;
+	text-align:center;
+	background:orange;
+}
+.show-title span , .chat-title span{
+	color:white;
+	font-weight:bold;
+	font-size:24px;
+}
+	/*----------------chat-main--------------*/
+#chat-main{
+	width:calc(75% - 6px);
+	border:2px solid orange;
+	float:right;
+	height:calc(100% - 6px);
+	position:relative;
+}
+	/*----------------chats-part-------------*/
+#chats-part{
+	width:100%;
+	height:calc(100% - 75px);
+	overflow:auto;
+}
+#chats-part .my-chat{
+	display:block;
+	max-width:80%;
+	float:right;
+	margin:5px;
+	text-align:right;
+}
+.my-chat div{
+	width:100%;
+	background:blue;
+	padding:5px;
+	color:white;
+	font-size:20px;
+	box-sizing:border-box;
+	border-radius:8px;
+}
+.others-chat{
+	max-width:80%;
+	float:left;
+	margin:5px;
+	text-align:left;
+}
+.others-chat .others-chat-msg{
+	width:100%;
+	background:darkgrey;
+	padding:5px;
+	box-sizing:border-box;
+	font-size:20px;
+	color:black;
+	border-radius:8px;	
+}
+.sender-id{
+	background:black;
+	padding:5px;
+	color:white;
+	box-sizing:border-box;
+	font-size:16px;
+	border-radius:8px;
+	text-transform:capitalize;
+}
+.time-for-chat{
+	color:grey;
+}
+	/*----------clear event-------------*/
+.clear{
+	clear:both;
+}
+	/*------------send------------------*/
+#send{
+	position:absolute;
+	width:100%;
+	bottom:0;
+	height:45px;
+	padding:5px;
+	box-sizing:border-box;
+}
+#send input{
+	width:calc(80% - 5px);
+	outline:none;
+	border:2px solid orange;
+	padding:3px;
+	font-size:18px;
+	border-radius:8px;
+	margin-right:5px;
+}
+#send button{
+	width:20%;
+	border-radius:8px;
+	background:orange;
+	outline:none;
+	border:none;
+	color:white;
+	font-size:20px;
+	padding:3px;
+	box-sizing:border-box;
+}
+#send button:hover{
+	color:orange;
+	background:white;
+	border:2px solid orange;
+}
+#send input:focus{
+	border:2px solid #17db17;
+}
+/*---------------footer------*/
+#footer{
+	width:100%;
+	background-color:#17db17;
+	color:white;
+	height:40px;
+	position:absolute;
+	bottom:0;
+	text-align:center;
+}
+#footer span{
+	font-size:32px;
+	font-weight:bold;
+}
+/*-----------------style-for-phone----------*/
+@media only screen and (max-width:768px){
+	#members{
+		width:calc(100% - 8px);
+		overflow:hidden;
+		z-index:3;
+		position:absolute;
+		top:0px;
+		left:0px;
+		background:white;
+		margin-left:-100%;
+		transition: 0.5s;
+	}
+	#header span{
+		font-size:24px;	
+		padding-top:10px;
+	}
+	#chat-main{
+		width:calc(100% - 8px);	
+	}
+	#img-to-home{
+		display:inline;	
+		transition:0.5s;
+	}
+	#img-to-close{
+		display:none;	
+		transition:0.5s;
+		margin-left:5px;
+	}
+	#footer span{
+		font-size:24px;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+

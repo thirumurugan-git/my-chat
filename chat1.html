@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Family-chate</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script src="js/script.js"></script>
+	<script src = "/socket.io/socket.io.js"></script>
+</head>
+<body>
+	<div class="main">
+		<div id="header">
+			<div id="img-to-home" onclick="open_menu()">
+				<img src="picture/home.png"></img>
+			</div>
+			<div id="img-to-close" onclick="close_menu()">
+				<img src="picture/close.png"></img>
+			</div>
+			<span>Apparswamy Family</span>
+		</div>
+		<div id="chat-application">
+			<div id="members">
+				<div class="show-title"><span>Members</span></div>
+				<div id="members-main">
+					<div class="members-in-chat">
+						<span class="mem-name">tamil</span>
+						<span class="status">online</span>
+					</div>
+					<div class="members-in-chat">
+						<span class="mem-name">swathi</span>
+						<span class="status">online</span>
+					</div>
+				</div>
+			</div>
+			<div id="chat-main">
+				<div class="chat-title"><span>Chats</span></div>
+				<div id="chats-part">
+					<div class="my-chat"><div><span>hi welcome</span></div><span class="time-for-chat">11.26pm</span></div>
+					<div class="clear"></div>
+					<div class="others-chat"><div class="others-chat-msg"><div class="sender-id"><span>Sender:</span></div><span>hi welcome</span></div><span class="time-for-chat">11.26pm</span></div>
+					<div class="clear"></div>
+				</div>
+				<div id="send"><input placeholder="created by thiru"></input><button type="submit">send</button></div>
+			</div>
+		</div>
+		<div id="footer"><span>copyright @ apparswamy family</span></div>
+	</div>		
+</body>
+</html>
