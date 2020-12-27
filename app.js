@@ -34,7 +34,7 @@ app.use(session);
 io.use(sharedsession(session));
 
 var sessionChecker = (req, res, next) => {
-    if (req.session.user && req.cookies.user_name) {
+    if (req.session.user && req.cookies.your_key) {
         res.redirect('/chat');
     } else {
         next();
@@ -42,8 +42,8 @@ var sessionChecker = (req, res, next) => {
 };
 
 app.use((req, res, next) => {
-    if (req.cookies.user_sid && !req.session.user) {
-        res.clearCookie('user_name');        
+    if (req.cookies.your_key && !req.session.user) {
+        res.clearCookie('your_key');        
     }
     next();
 });
@@ -173,8 +173,8 @@ app.get('/dashboard', (req, res) => {
 */
 // route for user logout
 app.get('/logout', (req, res) => {
-    if (req.session.user && req.cookies.user_name) {
-        res.clearCookie('user_name');
+    if (req.session.user && req.cookies.your_key) {
+        res.clearCookie('your_key');
     }
     res.redirect('/');
 });
